@@ -41,12 +41,15 @@ end
 
 group :test do
   gem 'better_html'
+  gem 'erb_lint'
   gem 'rubocop'
   gem 'rubocop-rails'
 
   # Shoulda helps you write more understandable, maintainable Rails-specific tests using Minitest.
   gem 'shoulda', '~> 3.5'
   gem 'shoulda-matchers', '~> 2.0'
+  # add support for BigDecimal
+  gem 'bigdecimal', '1.3.5'
 
   gem 'simplecov', require: false
 end
