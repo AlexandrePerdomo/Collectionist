@@ -21,7 +21,7 @@ class ShopsController < ApplicationController
     if @shop.save
       redirect_to @shop, notice: t('.success')
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class ShopsController < ApplicationController
     if @shop.update(shop_params)
       redirect_to @shop, notice: t('.success')
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
