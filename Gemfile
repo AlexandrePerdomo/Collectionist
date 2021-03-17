@@ -41,9 +41,11 @@ end
 
 group :test do
   gem 'better_html'
+  gem 'capybara'
   gem 'erb_lint'
   gem 'rubocop'
   gem 'rubocop-rails'
+  gem 'webdrivers'
 
   # Shoulda helps you write more understandable, maintainable Rails-specific tests using Minitest.
   gem 'shoulda', '~> 3.5'
