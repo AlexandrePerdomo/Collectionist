@@ -1,0 +1,6 @@
+<h1><%= t '.edit_shop' %></h1>
+
+<%= render 'form', shop: @shop %>
+
+<%= link_to t('actions.edit'), @shop %> |
+<%= link_to t('actions.back'), shops_path %>

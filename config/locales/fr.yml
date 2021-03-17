@@ -1,5 +1,36 @@
 fr:
+  actions:
+    back: Retour
+    show: Voir
+    edit: Modifier
+    destroy: Supprimer
+    sure: Êtes vous sur ?
+  shops:
+    index:
+      shops: Les magasins
+      name: Nom du magasin
+      actions: Actions
+      new: Créer un nouveau magasin
+    show:
+      name: Nom du magasin
+    new:
+      new_shop: Créer un nouveau magasin
+    form:
+      correct: Merci de corriger les éléments suivants
+    edit:
+      edit_shop: Modifier le magasin
+    create:
+      success: Le magasin a été crée avec succès
+    update:
+      success: Le magasin a été mis à jour avec succès
+    destroy:
+      success: Le magasin a été supprimé avec succès
   activerecord:
+    models:
+      shop: magasin
+    attributes:
+      shop:
+        name: Nom
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'

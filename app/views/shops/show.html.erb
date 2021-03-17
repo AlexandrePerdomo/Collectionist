@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('.name') %></strong>
+  <%= @shop.name %>
+</p>
+
+<%= link_to t('actions.edit'), edit_shop_path(@shop) %> |
+<%= link_to t('actions.back'), shops_path %>
