@@ -14,6 +14,10 @@ module ActiveSupport
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
 
+    def today_for_test
+      Date.new(2020, 3, 27)
+    end
+
     # Add more helper methods to be used by all tests here...
   end
 end
