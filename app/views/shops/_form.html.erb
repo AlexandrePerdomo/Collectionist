@@ -15,12 +15,13 @@
     <%= form.input :name %>
   </div>
 
+  <%= link_to_add_association t('.add_open_hours'), form, :open_hours, data: {association_insertion_node: '.open_hours'} %>
+
   <div class="open_hours">
     <%= form.simple_fields_for :open_hours do |builder| %>
       <%= render 'open_hour_fields', f: builder %>
     <% end %>
   </div>
-  <%= link_to_add_association 'add assignment', form, :open_hours, data: {association_insertion_node: '.open_hours'} %>
 
   <div class="actions">
     <%= form.submit %>

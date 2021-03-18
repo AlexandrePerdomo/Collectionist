@@ -1,5 +1,9 @@
 <h1><%= t '.new_shop' %></h1>
 
-<%= render 'form', shop: @shop %>
+<div class="row">
+  <div class="col-8 offset-2">
+  <%= render 'form', shop: @shop %>
 
-<%= link_to t('actions.back'), shops_path %>
+  <%= link_to t('actions.back'), shops_path %>
+  </div>
+</div>
