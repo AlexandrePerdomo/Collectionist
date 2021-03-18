@@ -22,7 +22,7 @@ class ShopsControllerTest < ActionDispatch::IntegrationTest
       post shops_url, params: { shop: { name: @shop.name } }
     end
 
-    assert_redirected_to shop_url(Shop.last)
+    assert_redirected_to shop_url(Shop.last, locale: 'fr')
   end
 
   test 'should not create shop with wrong params' do
@@ -44,7 +44,7 @@ class ShopsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update shop' do
     patch shop_url(@shop), params: { shop: { name: @shop.name } }
-    assert_redirected_to shop_url(@shop)
+    assert_redirected_to shop_url(@shop, locale: 'fr')
   end
 
   test 'should not update shop with wrong params' do
@@ -57,6 +57,6 @@ class ShopsControllerTest < ActionDispatch::IntegrationTest
       delete shop_url(@shop)
     end
 
-    assert_redirected_to shops_url
+    assert_redirected_to shops_url(locale: 'fr')
   end
 end
