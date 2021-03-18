@@ -2,13 +2,14 @@
 
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[show edit update destroy]
-  before_action :set_open_hours, only: %i[show edit]
 
   def index
     @shops = Shop.all
   end
 
-  def show; end
+  def show
+    @open_hours = @shop.generate_open_hours
+  end
 
   def new
     @shop = Shop.new
@@ -18,7 +19,6 @@ class ShopsController < ApplicationController
 
   def create
     @shop = Shop.new(shop_params)
-
     if @shop.save
       redirect_to @shop, notice: t('.success')
     else
@@ -45,11 +45,7 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 
-  def set_open_hours
-    @open_hours = @shop.generate_open_hours
-  end
-
   def shop_params
-    params.require(:shop).permit(:name)
+    params.require(:shop).permit(:name, open_hours_attributes: %i[id day opens closes _destroy])
   end
 end

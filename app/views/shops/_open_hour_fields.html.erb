@@ -1,0 +1,6 @@
+<div class="field nested-fields" style="display: flex;">
+  <%= f.input :day, collection: ((1..7).map { |i| [t("days.#{i}"), i] }) %>
+  <%= f.input :opens, as: :time, minute_step: 5 %>
+  <%= f.input :closes, as: :time, minute_step:  5 %>
+  <%= link_to_remove_association "remove task", f %>
+</div>

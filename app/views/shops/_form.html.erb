@@ -1,4 +1,4 @@
-<%= form_with(model: shop) do |form| %>
+<%= simple_form_for @shop do |form| %>
   <% if shop.errors.any? %>
     <div id="error_explanation">
       <h2> <%= t('.correct') %></h2>
@@ -12,9 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.input :name %>
   </div>
+
+  <div class="open_hours">
+    <%= form.simple_fields_for :open_hours do |builder| %>
+      <%= render 'open_hour_fields', f: builder %>
+    <% end %>
+  </div>
+  <%= link_to_add_association 'add assignment', form, :open_hours, data: {association_insertion_node: '.open_hours'} %>
 
   <div class="actions">
     <%= form.submit %>
