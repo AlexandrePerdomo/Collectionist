@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">Heuréka</a>
+  <li class="nav-item dropdown">
+    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%= t('locales.choose') %>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <%= link_to t('locales.fr'), url_for( :locale => 'fr' ), class: "dropdown-item" %>
+      <%= link_to t('locales.en'), url_for( :locale => 'en' ), class: "dropdown-item" %>
+    </div>
+  </li>
+</nav>

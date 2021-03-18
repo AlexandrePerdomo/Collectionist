@@ -1,6 +1,59 @@
 ---
 en:
+  days:
+    1: Monday
+    2: Tuesday
+    3: Wednesday
+    4: Thursday
+    5: Friday
+    6: Saturday
+    7: Sunday
+  locales:
+    choose: Language
+    fr: French
+    en: English
+  actions:
+    back: Back
+    show: Show
+    edit: Edit
+    destroy: Delete
+    sure: Are you sure ?
+  shops:
+    index:
+      shops: Shop
+      name: Shop's name
+      actions: Actions
+      new: Create a new shop
+    show:
+      name: Shop'name
+    new:
+      new_shop: Create a new shop
+    form:
+      correct: Please review the problem below
+      add_open_hours: Add opening hours
+    open_hour_fields:
+      remove_open_hours: Delete opening hours
+    edit:
+      edit_shop: Edit shop
+    create:
+      success: Created with success
+    update:
+      success: Updated with success
+    destroy:
+      success: Deleted with success
+    opening_hour:
+      closed: Closed
   activerecord:
+    models:
+      shop: shop
+      open_hour: Opening hours
+    attributes:
+      shop:
+        name: Name
+      open_hour:
+        opens: Open at
+        closes: Close at
+        day: Day
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -107,6 +160,7 @@ en:
       month: Month
       year: Year
   errors:
+    opens_before_closes: Opening hour must be before closing hour
     format: "%{attribute} %{message}"
     messages:
       accepted: must be accepted
