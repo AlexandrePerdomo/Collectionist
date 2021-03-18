@@ -1,4 +1,12 @@
 fr:
+  days:
+    1: Lundi
+    2: Mardi
+    3: Mercredi
+    4: Jeudi
+    5: Vendredi
+    6: Samedi
+    7: Dimanche
   actions:
     back: Retour
     show: Voir
@@ -25,6 +33,8 @@ fr:
       success: Le magasin a été mis à jour avec succès
     destroy:
       success: Le magasin a été supprimé avec succès
+    opening_hour:
+      closed: Fermé
   activerecord:
     models:
       shop: magasin
@@ -141,6 +151,7 @@ fr:
       month: Mois
       year: Année
   errors:
+    opens_before_closes: L'heure d'ouverture doit être avant l'heure de fermeture
     format: "%{attribute} %{message}"
     messages:
       accepted: doit être accepté(e)

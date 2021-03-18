@@ -5,5 +5,9 @@
   <%= @shop.name %>
 </p>
 
+<% @open_hours.each_with_index do |(key, value), index| %>
+  <%= render 'opening_hour', day: key, open_hours: value, strong: index.zero? %>
+<% end %>
+
 <%= link_to t('actions.edit'), edit_shop_path(@shop) %> |
 <%= link_to t('actions.back'), shops_path %>

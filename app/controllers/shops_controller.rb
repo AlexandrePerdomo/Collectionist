@@ -2,6 +2,7 @@
 
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[show edit update destroy]
+  before_action :set_open_hours, only: %i[show edit]
 
   def index
     @shops = Shop.all
@@ -42,6 +43,10 @@ class ShopsController < ApplicationController
 
   def set_shop
     @shop = Shop.find(params[:id])
+  end
+
+  def set_open_hours
+    @open_hours = @shop.generate_open_hours
   end
 
   def shop_params
