@@ -38,9 +38,13 @@ fr:
   activerecord:
     models:
       shop: magasin
+      open_hour: Horaires d'ouverture
     attributes:
       shop:
         name: Nom
+      open_hour:
+        opens: Ouvre à 
+        closes: Ferme à
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'
